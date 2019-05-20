@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../src/App.svelte",
+    "../src/Keypad.svelte",
+    "../src/Taskview.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n\timport Keypad from './Keypad.svelte';\n\timport Taskview from './Taskview.svelte';\n\n\texport let name;\n\n\tlet gameStarted = false;\n\n\tfunction startGame() {\n\t\tgameStarted = true;\n\t}\n\n</script>\n\n<style>\n\th1 {\n\t\tcolor: purple;\n\t}\n</style>\n\n<h1>Hello {name}!</h1>\n{#if !gameStarted}\n\t<button on:click={startGame}>Hier drücken zum Starten</button>\n{:else}\n\t<Taskview />\n\t<Keypad />\n{/if}\n",
+    "<script>\n\texport let name;\n</script>\n\n<style>\n\t.keypad {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\twidth: 240px;\n\t}\n\n\t.key {\n\t\tbox-sizing: border-box;\n\t\tflex-grow: 1;\n\t\theight: 80px;\n\t\tmargin: 0px;\n\t\twidth: 80px;\n\t}\n\n</style>\n\n<div class=\"keypad\">\n\t<button class=\"key\">1</button>\n\t<button class=\"key\">2</button>\n\t<button class=\"key\">3</button>\n\t<button class=\"key\">4</button>\n\t<button class=\"key\">5</button>\n\t<button class=\"key\">6</button>\n\t<button class=\"key\">7</button>\n\t<button class=\"key\">8</button>\n\t<button class=\"key\">9</button>\n\t<button class=\"key\">0</button>\n</div>\n",
+    "<script>\n\texport let name;\n</script>\n\n<style>\n\t.keypad {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\twidth: 240px;\n\t}\n\n\t.key {\n\t\tbox-sizing: border-box;\n\t\tflex-grow: 1;\n\t\theight: 80px;\n\t\tmargin: 0px;\n\t\twidth: 80px;\n\t}\n\n</style>\n\n<div class=\"keypad\">\n\t<button class=\"key\">1</button>\n\t<button class=\"key\">2</button>\n\t<button class=\"key\">3</button>\n\t<button class=\"key\">4</button>\n\t<button class=\"key\">5</button>\n\t<button class=\"key\">6</button>\n\t<button class=\"key\">7</button>\n\t<button class=\"key\">8</button>\n\t<button class=\"key\">9</button>\n\t<button class=\"key\">0</button>\n</div>\n"
+  ],
+  "names": [],
+  "mappings": "AAeC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,MAAM,AACd,CAAC;ACZD,OAAO,eAAC,CAAC,AACR,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,IAAI,CACf,KAAK,CAAE,KAAK,AACb,CAAC,AAED,IAAI,eAAC,CAAC,AACL,UAAU,CAAE,UAAU,CACtB,SAAS,CAAE,CAAC,CACZ,MAAM,CAAE,IAAI,CACZ,MAAM,CAAE,GAAG,CACX,KAAK,CAAE,IAAI,AACZ,CAAC;ACZD,OAAO,eAAC,CAAC,AACR,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,IAAI,CACf,KAAK,CAAE,KAAK,AACb,CAAC,AAED,IAAI,eAAC,CAAC,AACL,UAAU,CAAE,UAAU,CACtB,SAAS,CAAE,CAAC,CACZ,MAAM,CAAE,IAAI,CACZ,MAAM,CAAE,GAAG,CACX,KAAK,CAAE,IAAI,AACZ,CAAC"
+}
